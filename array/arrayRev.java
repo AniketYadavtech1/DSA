@@ -1,6 +1,5 @@
 public class arrayRev {
     public static void main(String[] args) {
-
         // step 1 using swap method
         // step 2 using swap method
         // step 3 using swap method
@@ -8,9 +7,7 @@ public class arrayRev {
         // start to end check while loop
         // step 5 make a temp variable and store or arr[start]
         // swap to start to end
-
         int arr[] = { 1, 2, 3, 4, };
-
         int start = 0;
         int end = arr.length - 1;
         while (start < end) {
