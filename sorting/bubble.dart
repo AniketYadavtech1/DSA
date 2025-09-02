@@ -1,34 +1,29 @@
-bubbleSort(){
-
-//sort bubble sort is a simplete using swap method 
-// it is not use for the long case 
-// bes case N logN
-// worst Case N squre 
-// and memory    N no parting check it  
-// memore N stable No use method Partitioning 
-List  num = [1,3,4,5,6,2];
-int n = num.length;
-
-
-for(int i=0;i<n-1;i++){
-  bool swap = false;
-  for(int  j=0;i<n-i-1;j++){
-    if(num[j]>num[j+1]){
-      int temp = num[j];
-      num[j] = num[j+1];
-      num[j+1]=temp;
-      swap= true;
+void bubbleSort() {
+  // Bubble sort is a simple sorting algorithm using swap method.
+  // Best case: O(N) (when already sorted with optimization)
+  // Worst case: O(N^2)
+  // Memory: O(1) (in-place), Stable.
+  List<int> num = [1, 2, 5, 1, 2, 8, 9];
+  int n = num.length;
+  bool swap;
+  for (int i = 0; i < n - 1; i++) {
+    swap = false;
+    for (int j = 0; j < n - i - 1; j++) { 
+      if (num[j] > num[j + 1]) {
+        int temp = num[j];
+        num[j] = num[j + 1];
+        num[j + 1] = temp;
+        swap = true;
+      }
     }
+
     
+    if (!swap) {
+      break;
+    }
   }
-  if(!swap){
-    break;
-
-  }
-}
-
-}
-
-void main(){
+  print(num); 
+void main() {
   bubbleSort();
+}
 }
