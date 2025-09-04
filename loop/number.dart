@@ -68,38 +68,21 @@ ReverseNumber(){
 }
 
 checkPalindrome(){
+  // int n = 122199;
   int n = 1221;
   int start = 0;
   int end = n-1;
-  while(start<=end){
+  while(start<end){
     if(start==end){
       print("Number is palindrome");
-    }
-
-    if(start<end){
-      
-    }
+      break;
+    }else{
+      print("Number is not palindrome");
+      break;
+    } 
   }
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void main(){
-  ReverseNumber();
+  checkPalindrome();
 }
