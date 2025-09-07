@@ -67,21 +67,36 @@ ReverseNumber(){
   }
 }
 
-checkPalindrome(){
-  // int n = 122199;
+void checkPalindrome() {
   int n = 1221;
-  int start = 0;
-  int end = n-1;
-  while(start<end){
-    if(start==end){
-      print("Number is palindrome");
-      break;
-    }else{
-      print("Number is not palindrome");
-      break;
-    } 
+  int rev = 0;
+  int originalNumber = n;
+
+  while (n > 0) {
+    int digit = n % 10;        
+    rev = rev * 10 + digit;   
+    n = n ~/ 10;              
+  }
+
+  if (originalNumber == rev) {
+    print("Number is palindrome");
+  } else {
+    print("Number is not palindrome");
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void main(){
   checkPalindrome();
