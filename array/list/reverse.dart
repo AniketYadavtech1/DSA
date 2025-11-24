@@ -10,7 +10,7 @@ start++;
   end--;
 
 for(int i =0;i<number.length;i++){
-  // print("${number[i]}");
+
   
 }
 

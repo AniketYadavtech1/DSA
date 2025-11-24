@@ -14,6 +14,24 @@ import 'dart:io';
     print(" ");
   }
 }
+
+
+// 1 
+// 0 1 
+// 1 0 1
+// 0 1 0 1 
+// 1 0 1 0 1
+
+
+
+
+
+
+
+
+
+
+
 void main(){
   squrePattern1(5);
  
