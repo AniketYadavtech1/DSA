@@ -27,6 +27,7 @@ public class arrremove {
 
         for (int x : arr)
             set.add(x);
+        // set.add(x);
 
         System.err.println(set);
 
