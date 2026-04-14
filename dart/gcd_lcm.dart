@@ -1,8 +1,6 @@
 import 'dart:io';
 
 gcdLcm(){
-
-
   stdout.write("Enter the first Number");
   int n1 = int.parse(stdin.readLineSync()!);
   stdout.write("Enter Second Number");
