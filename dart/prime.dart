@@ -8,5 +8,7 @@ void main(){
   }else{
   print("Number is not  prime");
 
+  // welcome
+
   } 
 }
