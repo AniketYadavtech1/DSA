@@ -1,5 +1,7 @@
 // step 1 printe number print range 1 to 100
 
+import '../dart/fibono.dart';
+
 void primeNumber() {
   int n = 10;
   for (int i = 2; i <= n; i++) {
@@ -18,7 +20,6 @@ bool checkPrime(int n) {
   if (n <= 1) {
     return false;
   }
-
   for (int i = 2; i * i <= n; i++) {
     if (n % i == 0) {
       return false;
@@ -28,10 +29,29 @@ bool checkPrime(int n) {
   return true;
 }
 
+//fibon serise
+void fibonoki() {
+  int a = 0;
+  int b = 1;
+  int n = 5;
+
+  print(a);
+  print(b);
+
+  for (int i = 2; i < n; i++) {
+    int next = a + b;
+    print(next);
+    a = b;
+    b = next;
+  }
+}
+
+
+
 void main() {
-  int n = 7;
+  // int n = 7;
+  // bool result = checkPrime(n);
+  // print(result);
 
-  bool result = checkPrime(n);
-
-  print(result); 
+  fibonoki();
 }
