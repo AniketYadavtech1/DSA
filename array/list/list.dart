@@ -56,18 +56,29 @@ void reverseArray() {
   int start = 0;
   int end = num.length - 1;
   while (start < end) {
-    int temp =num[start];
-    num [start] = num[end];
+    int temp = num[start];
+    num[start] = num[end];
     num[end] = temp;
     start++;
     end--;
   }
   print(num);
+}
 
+void reverseNumber() {
+  int n = 12345;
+  int res = 0;
+
+  while (n > 0) {
+    int rem = n % 10;      // last digit
+    res = (res * 10) + rem; // build reverse number
+    n = n ~/ 10;           // IMPORTANT: remove last digit
+  }
+
+  print("Reverse Number: $res");
 }
 
 void main() {
-  reverseArray();
-
-
+  reverseNumber();
+  // reverseArray();
 }
