@@ -36,19 +36,38 @@ void dublicate() {
 
   // max number logic
 
-  int max=0;
+  int max = 0;
 
   // logic int max for 0 to n;
   // step while max<=0;
-  for (int i = 0; i <= product.length-1;i++) {
-    if (max >=product[i]) {
+  for (int i = 0; i <= product.length - 1; i++) {
+    if (max >= product[i]) {
       max = product[i];
       print(max);
     }
   }
 }
 
+// void reverse Array
+void reverseArray() {
+  List num = [1, 2, 3, 4, 5];
+  // step 1. first start = 0 and end num1.length-1;
+  // step 2.  while loop check while(start<end) int temp = start, start end end = temp start++ end --
+  int start = 0;
+  int end = num.length - 1;
+  while (start < end) {
+    int temp =num[start];
+    num [start] = num[end];
+    num[end] = temp;
+    start++;
+    end--;
+  }
+  print(num);
+
+}
+
 void main() {
-  dublicate();
-  // listcomplete();
+  reverseArray();
+
+
 }
