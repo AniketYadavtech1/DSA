@@ -70,15 +70,32 @@ void reverseNumber() {
   int res = 0;
 
   while (n > 0) {
-    int rem = n % 10;      // last digit
+    int rem = n % 10; // last digit
     res = (res * 10) + rem; // build reverse number
-    n = n ~/ 10;           // IMPORTANT: remove last digit
+    n = n ~/ 10; // IMPORTANT: remove last digit
   }
-
   print("Reverse Number: $res");
 }
 
+void maxElement() {
+  List arr = [1, 2, 3, 5, 10, 40, 30];
+  // int max = arr.length - 1;
+  // int min = 0;
+  // if (max <= min) {
+  //   print("false");
+  // }
+  int max = arr[0];
+  for (int i = 0; i < arr.length; i++) {
+    if(arr[i]>max){
+      max = arr[i];
+  
+    }
+  }
+   print(max);
+}
+
 void main() {
-  reverseNumber();
+  maxElement();
+  // reverseNumber();
   // reverseArray();
 }
