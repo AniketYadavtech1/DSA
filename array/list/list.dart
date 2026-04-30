@@ -1,3 +1,6 @@
+import '../../dartcomplet/printall.dart';
+import '../../logic/rang_prime.dart';
+
 listcomplete() {
   List<int> number = [1, 2, 3, 4, 5, 6];
   int n = number.length;
@@ -86,16 +89,26 @@ void maxElement() {
   // }
   int max = arr[0];
   for (int i = 0; i < arr.length; i++) {
-    if(arr[i]>max){
+    if (arr[i] > max) {
       max = arr[i];
-  
     }
   }
-   print(max);
+  print(max);
+}
+
+// count digits
+void countNumber() {
+  int number = 12345654;
+  int count = 0;
+  if (number % 10 == 0) {
+    count += number;
+    count++;
+  }
 }
 
 void main() {
-  maxElement();
+  countNumber();
+  // maxElement();
   // reverseNumber();
   // reverseArray();
 }
