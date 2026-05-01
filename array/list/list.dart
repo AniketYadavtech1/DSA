@@ -100,14 +100,50 @@ void maxElement() {
 void countNumber() {
   int number = 12345654;
   int count = 0;
-  if (number % 10 == 0) {
-    count += number;
-    count++;
+  if (number < 0) {
+    count = 1;
+  } else {
+    while (number != 0) {
+      number = number ~/ 10;
+      ++count;
+    }
   }
+  print("Count Number : ${count}");
 }
 
+void sumNumber() {
+  int num = 123;
+  int sum = 0;
+  while (num >0) {
+    int digits = num % 10;
+    sum = sum + digits;
+    num= num~/10;
+  }
+  print("${sum}");
+
+
+//iteration: num = 123, or sum = 00 digit = 123%10 == 3, sum = 0+3; sum = 3, num = 123~/10; num 12, and sum = 0
+// iteration 2: num = 12 sum = 3, digith =12%10==2, sum = 3+2= 5, num 1 
+// iteration 3: num = 1 sum = 5 , digits = 
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
 void main() {
-  countNumber();
+sumNumber();
+  // countNumber();
   // maxElement();
   // reverseNumber();
   // reverseArray();
