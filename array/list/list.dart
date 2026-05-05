@@ -116,35 +116,52 @@ void countNumber() {
 void sumNumber() {
   int num = 123;
   int sum = 0;
-  while (num >0) {
+  while (num > 0) {
     int digits = num % 10;
     sum = sum + digits;
-    num= num~/10;
+    num = num ~/ 10;
   }
   print("${sum}");
 
+  //iteration: num = 123, or sum = 00 digit = 123%10 == 3, sum = 0+3; sum = 3, num = 123~/10; num 12, and sum = 0
+  // iteration 2: num = 12 sum = 3, digith =12%10==2, sum = 3+2= 5, num 1
+  // iteration 3: num = 1 sum = 5 , digits =
+}
 
-//iteration: num = 123, or sum = 00 digit = 123%10 == 3, sum = 0+3; sum = 3, num = 123~/10; num 12, and sum = 0
-// iteration 2: num = 12 sum = 3, digith =12%10==2, sum = 3+2= 5, num 1 
-// iteration 3: num = 1 sum = 5 , digits = 
+// void smallestNumber() {
+//   List num = [1, 2, 3, 4, 5,6];
+//   int smallNum = num[0];
+//   for (int i = 0; i < num.length; i++) {
+//     if (smallNum > num[i]) {
+//       smallNum = num[i];
+//     } else if (smallNum>num[i] && )
+//   }
+//   print(smallNum);
+// }
 
 
+ListReverse(){
+  List num = [1,2,3,4,5,];
+  int start = 0;
+  int end = num.length-1;
+  while(start<end){
+    int temp = num[start];
+    num[start]= num[end];
+    num[end] = temp;
+    start++;
+    end--;
 
-
-
-
+  }
+  print(num);
 }
 
 
 
 
-
-
-
-
-
 void main() {
-sumNumber();
+  ListReverse();
+  // sumNumber();
+  // smallestNumber();
   // countNumber();
   // maxElement();
   // reverseNumber();
